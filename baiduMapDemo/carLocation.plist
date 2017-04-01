@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>list</key>
+	<array>
+		<dict>
+			<key>log</key>
+			<string>116.454017</string>
+			<key>lat</key>
+			<string>39.933867</string>
+			<key>car_id</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>lon</key>
+			<string>116.454465</string>
+			<key>lat</key>
+			<string>39.933895</string>
+			<key>car_id</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>lon</key>
+			<string>116.454017</string>
+			<key>lat</key>
+			<string>39.933571</string>
+			<key>car_id</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>lon</key>
+			<string>116.454612</string>
+			<key>lat</key>
+			<string>39.933247</string>
+			<key>car_id</key>
+			<string>4</string>
+		</dict>
+		<dict>
+			<key>lon</key>
+			<string>116.454804</string>
+			<key>lat</key>
+			<string>39.932352</string>
+			<key>car_id</key>
+			<string>5</string>
+		</dict>
+	</array>
+</dict>
+</plist>

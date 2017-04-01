@@ -1,0 +1,15 @@
+PODS:
+  - BaiduMapKit (3.2.1)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - BaiduMapKit
+  - YYModel
+
+SPEC CHECKSUMS:
+  BaiduMapKit: 9c748785aa3dddfc41dcb70c14b21ce32f680930
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 453f612af40a923f0c44d7a624172dd21e0a769c
+
+COCOAPODS: 1.2.0
