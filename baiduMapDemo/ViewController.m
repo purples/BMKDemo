@@ -45,7 +45,7 @@
     [self setupCuurentLocation];
     [self setupMyLocationParam];
     [self setupPinImg];
-
+    
 //    [self getCarLocationData];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(getCarLocationData) userInfo:nil repeats:YES];
     [timer fire];

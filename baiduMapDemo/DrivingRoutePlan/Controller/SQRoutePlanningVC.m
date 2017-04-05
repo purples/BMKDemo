@@ -10,11 +10,14 @@
 
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BaiduMapAPI_Location/BMKLocationService.h>
+#import "SQRouteMapView.h"
+#import <CoreLocation/CLLocation.h>
 
 @interface SQRoutePlanningVC ()
 <BMKMapViewDelegate,
 BMKLocationServiceDelegate>
 
+@property (nonatomic, strong) SQRouteMapView                    *mapView;
 
 
 @end
@@ -25,10 +28,37 @@ BMKLocationServiceDelegate>
     [super viewDidLoad];
     self.title = @"路线规划";
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    [self setupMapView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.mapView viewWillAppear:animated];
+}
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.mapView viewDidDisappear:animated];
+}
+
+- (void)setupMapView
+{
+    self.mapView = [[SQRouteMapView alloc] initWithFrame:self.view.bounds];
+    CLLocationCoordinate2D startCoor;
+    startCoor.latitude = 39.933740;
+    startCoor.longitude = 116.452287;
+    
+    CLLocationCoordinate2D endCoor;
+    endCoor.latitude = 39.935509;
+    endCoor.longitude = 116.453321;
+    
+    self.mapView.starCoordinate = startCoor;
+    self.mapView.endCoordinate = endCoor;
+    [self.mapView viewWillAppear:YES];
+    [self.view addSubview:self.mapView];
+}
 
 
 

@@ -15,9 +15,15 @@
 		390666DA1E89036800906A08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390666D81E89036800906A08 /* LaunchScreen.storyboard */; };
 		390666E51E89036800906A08 /* baiduMapDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 390666E41E89036800906A08 /* baiduMapDemoTests.m */; };
 		390666F01E89036800906A08 /* baiduMapDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 390666EF1E89036800906A08 /* baiduMapDemoUITests.m */; };
-		393ACD561E8E0719006346E4 /* SQPaoPaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 393ACD551E8E0719006346E4 /* SQPaoPaoView.m */; };
-		393ACD5F1E8E46F1006346E4 /* SQRoutePlanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 393ACD5E1E8E46F1006346E4 /* SQRoutePlanningVC.m */; };
-		394B9E581E8F5B420071EBFA /* SQRouteMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 394B9E571E8F5B420071EBFA /* SQRouteMapView.m */; };
+		3977F5D71E94FA35007EC393 /* DrivingRoutePlan in Resources */ = {isa = PBXBuildFile; fileRef = 3977F5D61E94FA35007EC393 /* DrivingRoutePlan */; };
+		3977F5DC1E94FC12007EC393 /* SQRoutePlanningVC.h in Sources */ = {isa = PBXBuildFile; fileRef = 3977F5DA1E94FC12007EC393 /* SQRoutePlanningVC.h */; };
+		3977F5DD1E94FC12007EC393 /* SQRoutePlanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3977F5DB1E94FC12007EC393 /* SQRoutePlanningVC.m */; };
+		3977F5E41E94FC24007EC393 /* SQPaoPaoView.h in Sources */ = {isa = PBXBuildFile; fileRef = 3977F5DE1E94FC24007EC393 /* SQPaoPaoView.h */; };
+		3977F5E51E94FC24007EC393 /* SQPaoPaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3977F5DF1E94FC24007EC393 /* SQPaoPaoView.m */; };
+		3977F5E61E94FC24007EC393 /* SQRouteAnnotation.h in Sources */ = {isa = PBXBuildFile; fileRef = 3977F5E01E94FC24007EC393 /* SQRouteAnnotation.h */; };
+		3977F5E71E94FC24007EC393 /* SQRouteAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3977F5E11E94FC24007EC393 /* SQRouteAnnotation.m */; };
+		3977F5E81E94FC24007EC393 /* SQRouteMapView.h in Sources */ = {isa = PBXBuildFile; fileRef = 3977F5E21E94FC24007EC393 /* SQRouteMapView.h */; };
+		3977F5E91E94FC24007EC393 /* SQRouteMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3977F5E31E94FC24007EC393 /* SQRouteMapView.m */; };
 		39EE08D61E8CFB0A000F5E89 /* SQCarAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EE08D51E8CFB0A000F5E89 /* SQCarAnnotationView.m */; };
 		39EE08D91E8CFF8D000F5E89 /* SQCarLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EE08D81E8CFF8D000F5E89 /* SQCarLocationModel.m */; };
 		39EE08DB1E8D0FE9000F5E89 /* carLocation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39EE08DA1E8D0FE9000F5E89 /* carLocation.plist */; };
@@ -59,12 +65,15 @@
 		390666EB1E89036800906A08 /* baiduMapDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baiduMapDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		390666EF1E89036800906A08 /* baiduMapDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = baiduMapDemoUITests.m; sourceTree = "<group>"; };
 		390666F11E89036800906A08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		393ACD541E8E0719006346E4 /* SQPaoPaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPaoPaoView.h; sourceTree = "<group>"; };
-		393ACD551E8E0719006346E4 /* SQPaoPaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPaoPaoView.m; sourceTree = "<group>"; };
-		393ACD5D1E8E46F1006346E4 /* SQRoutePlanningVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRoutePlanningVC.h; sourceTree = "<group>"; };
-		393ACD5E1E8E46F1006346E4 /* SQRoutePlanningVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRoutePlanningVC.m; sourceTree = "<group>"; };
-		394B9E561E8F5B420071EBFA /* SQRouteMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRouteMapView.h; sourceTree = "<group>"; };
-		394B9E571E8F5B420071EBFA /* SQRouteMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRouteMapView.m; sourceTree = "<group>"; };
+		3977F5D61E94FA35007EC393 /* DrivingRoutePlan */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DrivingRoutePlan; sourceTree = "<group>"; };
+		3977F5DA1E94FC12007EC393 /* SQRoutePlanningVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SQRoutePlanningVC.h; path = baiduMapDemo/DrivingRoutePlan/Controller/SQRoutePlanningVC.h; sourceTree = "<group>"; };
+		3977F5DB1E94FC12007EC393 /* SQRoutePlanningVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SQRoutePlanningVC.m; path = baiduMapDemo/DrivingRoutePlan/Controller/SQRoutePlanningVC.m; sourceTree = "<group>"; };
+		3977F5DE1E94FC24007EC393 /* SQPaoPaoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SQPaoPaoView.h; path = baiduMapDemo/DrivingRoutePlan/View/SQPaoPaoView.h; sourceTree = "<group>"; };
+		3977F5DF1E94FC24007EC393 /* SQPaoPaoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SQPaoPaoView.m; path = baiduMapDemo/DrivingRoutePlan/View/SQPaoPaoView.m; sourceTree = "<group>"; };
+		3977F5E01E94FC24007EC393 /* SQRouteAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SQRouteAnnotation.h; path = baiduMapDemo/DrivingRoutePlan/View/SQRouteAnnotation.h; sourceTree = "<group>"; };
+		3977F5E11E94FC24007EC393 /* SQRouteAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SQRouteAnnotation.m; path = baiduMapDemo/DrivingRoutePlan/View/SQRouteAnnotation.m; sourceTree = "<group>"; };
+		3977F5E21E94FC24007EC393 /* SQRouteMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SQRouteMapView.h; path = baiduMapDemo/DrivingRoutePlan/View/SQRouteMapView.h; sourceTree = "<group>"; };
+		3977F5E31E94FC24007EC393 /* SQRouteMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SQRouteMapView.m; path = baiduMapDemo/DrivingRoutePlan/View/SQRouteMapView.m; sourceTree = "<group>"; };
 		39EE08D41E8CFB0A000F5E89 /* SQCarAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCarAnnotationView.h; sourceTree = "<group>"; };
 		39EE08D51E8CFB0A000F5E89 /* SQCarAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQCarAnnotationView.m; sourceTree = "<group>"; };
 		39EE08D71E8CFF8D000F5E89 /* SQCarLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCarLocationModel.h; sourceTree = "<group>"; };
@@ -112,6 +121,14 @@
 		390666BE1E89036800906A08 = {
 			isa = PBXGroup;
 			children = (
+				3977F5DE1E94FC24007EC393 /* SQPaoPaoView.h */,
+				3977F5DF1E94FC24007EC393 /* SQPaoPaoView.m */,
+				3977F5E01E94FC24007EC393 /* SQRouteAnnotation.h */,
+				3977F5E11E94FC24007EC393 /* SQRouteAnnotation.m */,
+				3977F5E21E94FC24007EC393 /* SQRouteMapView.h */,
+				3977F5E31E94FC24007EC393 /* SQRouteMapView.m */,
+				3977F5DA1E94FC12007EC393 /* SQRoutePlanningVC.h */,
+				3977F5DB1E94FC12007EC393 /* SQRoutePlanningVC.m */,
 				390666C91E89036800906A08 /* baiduMapDemo */,
 				390666E31E89036800906A08 /* baiduMapDemoTests */,
 				390666EE1E89036800906A08 /* baiduMapDemoUITests */,
@@ -134,20 +151,15 @@
 		390666C91E89036800906A08 /* baiduMapDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3977F5D61E94FA35007EC393 /* DrivingRoutePlan */,
 				390666CD1E89036800906A08 /* AppDelegate.h */,
 				390666CE1E89036800906A08 /* AppDelegate.m */,
 				390666D01E89036800906A08 /* ViewController.h */,
 				390666D11E89036800906A08 /* ViewController.m */,
-				393ACD5D1E8E46F1006346E4 /* SQRoutePlanningVC.h */,
-				393ACD5E1E8E46F1006346E4 /* SQRoutePlanningVC.m */,
-				394B9E561E8F5B420071EBFA /* SQRouteMapView.h */,
-				394B9E571E8F5B420071EBFA /* SQRouteMapView.m */,
 				39EE08D41E8CFB0A000F5E89 /* SQCarAnnotationView.h */,
 				39EE08D51E8CFB0A000F5E89 /* SQCarAnnotationView.m */,
 				39EE08D71E8CFF8D000F5E89 /* SQCarLocationModel.h */,
 				39EE08D81E8CFF8D000F5E89 /* SQCarLocationModel.m */,
-				393ACD541E8E0719006346E4 /* SQPaoPaoView.h */,
-				393ACD551E8E0719006346E4 /* SQPaoPaoView.m */,
 				390666D31E89036800906A08 /* Main.storyboard */,
 				390666D61E89036800906A08 /* Assets.xcassets */,
 				390666D81E89036800906A08 /* LaunchScreen.storyboard */,
@@ -304,6 +316,7 @@
 				390666DA1E89036800906A08 /* LaunchScreen.storyboard in Resources */,
 				390666D71E89036800906A08 /* Assets.xcassets in Resources */,
 				39EE08DB1E8D0FE9000F5E89 /* carLocation.plist in Resources */,
+				3977F5D71E94FA35007EC393 /* DrivingRoutePlan in Resources */,
 				390666D51E89036800906A08 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,14 +390,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3977F5E41E94FC24007EC393 /* SQPaoPaoView.h in Sources */,
+				3977F5E51E94FC24007EC393 /* SQPaoPaoView.m in Sources */,
+				3977F5E61E94FC24007EC393 /* SQRouteAnnotation.h in Sources */,
+				3977F5E71E94FC24007EC393 /* SQRouteAnnotation.m in Sources */,
+				3977F5E81E94FC24007EC393 /* SQRouteMapView.h in Sources */,
+				3977F5E91E94FC24007EC393 /* SQRouteMapView.m in Sources */,
+				3977F5DC1E94FC12007EC393 /* SQRoutePlanningVC.h in Sources */,
+				3977F5DD1E94FC12007EC393 /* SQRoutePlanningVC.m in Sources */,
 				39EE08D91E8CFF8D000F5E89 /* SQCarLocationModel.m in Sources */,
-				393ACD5F1E8E46F1006346E4 /* SQRoutePlanningVC.m in Sources */,
 				39EE08D61E8CFB0A000F5E89 /* SQCarAnnotationView.m in Sources */,
 				390666D21E89036800906A08 /* ViewController.m in Sources */,
 				390666CF1E89036800906A08 /* AppDelegate.m in Sources */,
-				393ACD561E8E0719006346E4 /* SQPaoPaoView.m in Sources */,
 				390666CC1E89036800906A08 /* main.m in Sources */,
-				394B9E581E8F5B420071EBFA /* SQRouteMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
