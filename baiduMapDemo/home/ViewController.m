@@ -159,6 +159,7 @@
         if (car == nil) {
             car = [[SQCarAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"car"];
             car.bearing = 45;
+            car.paopaoTitle = @"hahah";
             car.alpha = 0;
         }
         [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
@@ -207,11 +208,11 @@
         for (int i = 0; i < self.pointAnnotationArr.count; i++) {
             BMKPointAnnotation *point = self.pointAnnotationArr[i];
             SQCarAnnotationView *car = (SQCarAnnotationView *)[self.mapView viewForAnnotation:point];
+//             car.paopaoTitle = @"hahah";
             [UIView animateWithDuration:0.5 animations:^{
 //                SQCarModel *m = self.oldCarLocArr[i];
 //                car.bearing = m.bearing;
                 car.bearing = 45;
-                car.paopaoTitle = @"hahah";
             }completion:^(BOOL finished) {
                 //帧动画
                 [UIView animateKeyframesWithDuration:4.5 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
