@@ -16,9 +16,7 @@
 #import "SQCarAnnotationView.h"
 
 #import "SQRoutePlanningVC.h"
-
-#define kScrrenWidth self.view.bounds.size.width
-#define kScreenHeight self.view.bounds.size.height
+#import "SQPOISearchVC.h"
 
 @interface ViewController ()<BMKLocationServiceDelegate, BMKMapViewDelegate>
 
@@ -40,6 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.view.frame = CGRectMake(0, kNavBarHeight, kScreenWidth, kScreenHeight - kNavBarHeight);
     ///地图定位
     [self setupMap];
     [self setupCuurentLocation];
@@ -68,7 +67,7 @@
 
 - (void)setupMap
 {
-    _mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, 0, kScrrenWidth, kScreenHeight)];
+    _mapView = [[BMKMapView alloc] initWithFrame:CGRectMake(0, kNavBarHeight, kScreenWidth, kScreenHeight - kNavBarHeight)];
     _mapView.mapType = BMKMapTypeStandard;
     _mapView.zoomLevel = 19;
     _mapView.showsUserLocation = YES;
@@ -102,7 +101,7 @@
 {
     CGFloat w = 20;
     CGFloat h = 50;
-    _pinImgView = [[UIImageView alloc] initWithFrame:CGRectMake((kScrrenWidth - w) / 2, (kScreenHeight - h) / 2 - 25, w, h)];
+    _pinImgView = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenWidth - w) / 2, (kScreenHeight - h) / 2 - 25, w, h)];
     _pinImgView.image = [UIImage imageNamed:@"pin"];
     [self.mapView addSubview:_pinImgView];
 }
@@ -214,8 +213,9 @@
 //                car.bearing = m.bearing;
                 car.bearing = 45;
             }completion:^(BOOL finished) {
+#warning （多个聚合以后会在别的地方闪一下，单个唯一却没这种现象） 为什么？
                 //帧动画
-                [UIView animateKeyframesWithDuration:4.5 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
+                [UIView animateKeyframesWithDuration:4 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
                     point.coordinate = CLLocationCoordinate2DMake(39.934022, 116.454584);
                 } completion:nil];
             }];

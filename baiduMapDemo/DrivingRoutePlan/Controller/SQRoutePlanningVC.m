@@ -13,11 +13,15 @@
 #import "SQRouteMapView.h"
 #import <CoreLocation/CLLocation.h>
 
+#import "SQSelectAddressView.h"
+#import "SQPOISearchVC.h"
+
 @interface SQRoutePlanningVC ()
 <BMKMapViewDelegate,
 BMKLocationServiceDelegate>
 
 @property (nonatomic, strong) SQRouteMapView                    *mapView;
+@property (nonatomic, strong) SQSelectAddressView               *selectAddrView;
 
 
 @end
@@ -28,6 +32,8 @@ BMKLocationServiceDelegate>
     [super viewDidLoad];
     self.title = @"路线规划";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.view.frame = CGRectMake(0, kNavBarHeight, kScreenWidth, kScreenHeight - kNavBarHeight);
+    [self setupSelectAddrView];
     [self setupMapView];
 }
 
@@ -45,7 +51,7 @@ BMKLocationServiceDelegate>
 
 - (void)setupMapView
 {
-    self.mapView = [[SQRouteMapView alloc] initWithFrame:self.view.bounds];
+    self.mapView = [[SQRouteMapView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.selectAddrView.frame), kScreenWidth, kScreenHeight - CGRectGetMaxY(self.selectAddrView.frame))];
     CLLocationCoordinate2D startCoor;
     startCoor.latitude = 39.933740;
     startCoor.longitude = 116.452287;
@@ -60,7 +66,30 @@ BMKLocationServiceDelegate>
     [self.view addSubview:self.mapView];
 }
 
+- (void)setupSelectAddrView
+{
+    self.selectAddrView = [[SQSelectAddressView alloc] initWithFrame:CGRectMake(55, kNavBarHeight, kScreenWidth - 100, 60)];
+    __weak __typeof(self)weakSelf = self;
+    [self.selectAddrView setSelectStartAddress:^(UIButton *btn){
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        [strongSelf searchAddress];
+    }];
+    
+    [self.selectAddrView setSelectEndAddress:^(UIButton *btn){
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        [strongSelf searchAddress];
+    }];
+    
+    [self.view addSubview:self.selectAddrView];
+}
 
+#pragma mark - POI搜索
+- (void)searchAddress
+{
+    SQPOISearchVC *searchVC = [[SQPOISearchVC alloc] init];
+//    [self presentViewController:searchVC animated:YES completion:nil];
+    [self.navigationController pushViewController:searchVC animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
