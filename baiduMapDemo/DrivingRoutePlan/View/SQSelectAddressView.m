@@ -63,4 +63,22 @@
     }
 }
 
+- (void)addressName:(NSString *)name addressType:(AddressType)addressType
+{
+    switch (addressType) {
+            
+        case AddressType_start:
+            [self.startBtn setTitle:name forState:UIControlStateNormal];
+            break;
+            
+        case AddressType_end:
+            [self.endBtn setTitle:name forState:UIControlStateNormal];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
 @end

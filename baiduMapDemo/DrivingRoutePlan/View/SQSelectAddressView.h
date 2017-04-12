@@ -14,5 +14,6 @@
 
 @property (nonatomic, copy) void (^selectEndAddress)();
 
+- (void)addressName:(NSString *)name addressType:(AddressType)addressType;
 
 @end

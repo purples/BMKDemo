@@ -16,6 +16,8 @@
          tableView:(UITableView *)tableView
 didSelectWithIndex:(NSIndexPath *)indexPath;
 
+- (void)scrollViewDidScroll;
+
 @end
 
 @interface SQSearchListView : UIView

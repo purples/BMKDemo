@@ -32,7 +32,7 @@ UITableViewDataSource>
 
 - (void)setupUI
 {
-    self.tabelView = [[UITableView alloc] initWithFrame:self.bounds];
+    self.tabelView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStyleGrouped];
     self.tabelView.delegate = self;
     self.tabelView.dataSource = self;
     self.tabelView.showsVerticalScrollIndicator = NO;
@@ -54,6 +54,10 @@ UITableViewDataSource>
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.001f;
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -71,10 +75,21 @@ UITableViewDataSource>
     return cell;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (self.delelgate && [self.delelgate respondsToSelector:@selector(scrollViewDidScroll)]) {
+        [self.delelgate scrollViewDidScroll];
+    }
+}
+
 - (void)setDataSource:(NSArray *)dataSource
 {
-    self.dataSource = dataSource;
+    _dataSource = dataSource;
     [self.tabelView reloadData];
+//    CGRect frame = self.bounds;
+//    frame.size.height = self.dataSource.count * 35;
+//    self.tabelView.frame = frame.size.height > self.bounds.size.height ? frame : self.bounds;
+//    self.tabelView.frame = frame;
 }
 
 @end

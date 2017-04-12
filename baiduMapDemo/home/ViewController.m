@@ -101,7 +101,7 @@
 {
     CGFloat w = 20;
     CGFloat h = 50;
-    _pinImgView = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenWidth - w) / 2, (kScreenHeight - h) / 2 - 25, w, h)];
+    _pinImgView = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenWidth - w) / 2, (kScreenHeight - h - kNavBarHeight) / 2 - 25, w, h)];
     _pinImgView.image = [UIImage imageNamed:@"pin"];
     [self.mapView addSubview:_pinImgView];
 }

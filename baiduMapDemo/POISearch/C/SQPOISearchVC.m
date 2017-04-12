@@ -37,13 +37,13 @@ UITextFieldDelegate>
 {
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(50, kNavBarHeight, kScreenWidth - 100, 25)];
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(50, kNavBarHeight + 5, kScreenWidth - 100, 30)];
+    self.textField.layer.borderWidth = 1;
+    self.textField.layer.borderColor = [UIColor grayColor].CGColor;
     self.textField.delegate = self;
-    self.textField.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.textField];
     
     self.listView = [[SQSearchListView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.textField.frame), kScreenWidth, kScreenHeight - CGRectGetMaxY(self.textField.frame))];
-    self.listView.backgroundColor = [UIColor yellowColor];
     self.listView.delelgate = self;
     [self.view addSubview:self.listView];
     
@@ -64,13 +64,32 @@ UITextFieldDelegate>
     return YES;
 }
 
+#pragma mark - SQSearchListViewDelegate
+- (void)searchListView:(SQSearchListView *)searchView tableView:(UITableView *)tableView didSelectWithIndex:(NSIndexPath *)indexPath
+{
+    BMKPoiInfo *info = searchView.dataSource[indexPath.row];
+    if (self.searchAddress) {
+        self.searchAddress(info, _addrType);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)scrollViewDidScroll
+{
+    [self.view endEditing:YES];
+}
 
 - (SQPOIHelper *)poiHelper
 {
-    if (_poiHelper) {
+    if (!_poiHelper) {
         _poiHelper = [SQPOIHelper poiHelper];
     }
     return _poiHelper;
+}
+
+- (void)setAddrType:(AddressType)addrType
+{
+    _addrType = addrType;
 }
 
 - (void)dealloc

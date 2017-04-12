@@ -15,6 +15,8 @@
 
 #import "SQSelectAddressView.h"
 #import "SQPOISearchVC.h"
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>
+
 
 @interface SQRoutePlanningVC ()
 <BMKMapViewDelegate,
@@ -72,21 +74,39 @@ BMKLocationServiceDelegate>
     __weak __typeof(self)weakSelf = self;
     [self.selectAddrView setSelectStartAddress:^(UIButton *btn){
         __strong __typeof(weakSelf)strongSelf = weakSelf;
-        [strongSelf searchAddress];
+        [strongSelf searchAddressWithButton:btn];
     }];
     
     [self.selectAddrView setSelectEndAddress:^(UIButton *btn){
         __strong __typeof(weakSelf)strongSelf = weakSelf;
-        [strongSelf searchAddress];
+        [strongSelf searchAddressWithButton:btn];
     }];
     
     [self.view addSubview:self.selectAddrView];
 }
 
 #pragma mark - POI搜索
-- (void)searchAddress
+- (void)searchAddressWithButton:(UIButton *)btn
 {
     SQPOISearchVC *searchVC = [[SQPOISearchVC alloc] init];
+    if (btn.tag == 1) {
+        searchVC.addrType = AddressType_start;
+    } else if (btn.tag == 2) {
+        searchVC.addrType = AddressType_end;
+    }
+    __weak __typeof(self)weakSelf = self;
+    [searchVC setSearchAddress:^(BMKPoiInfo *poiInfo, AddressType addrType) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        
+        [strongSelf.selectAddrView addressName:poiInfo.name addressType:addrType];
+        if (addrType == AddressType_start) {
+            strongSelf.mapView.starCoordinate = poiInfo.pt;
+        } else if (addrType == AddressType_end) {
+            strongSelf.mapView.endCoordinate = poiInfo.pt;
+        }
+       
+        
+    }];
 //    [self presentViewController:searchVC animated:YES completion:nil];
     [self.navigationController pushViewController:searchVC animated:YES];
 }

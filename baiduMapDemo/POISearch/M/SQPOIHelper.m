@@ -44,7 +44,7 @@
     option.keyword = keyword;
     option.city = city;
     option.pageIndex = 0;
-    option.pageCapacity = 20;
+    option.pageCapacity = 10;
    BOOL flag = [_search poiSearchInCity:option];
     if (flag) {
         NSLog(@"发送检索成功");

@@ -15,5 +15,14 @@
 
 #define kNavBarHeight   64
 
+/**
+ * 搜索地址type
+ **/
+typedef enum {
+    AddressType_unknown,
+    AddressType_start,//开始地址
+    AddressType_end,//结束地址
+} AddressType;
+
 
 #endif /* config_h */

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class BMKPoiInfo;
+
 @interface SQPOISearchVC : UIViewController
+
+@property (nonatomic, copy) void(^searchAddress)(BMKPoiInfo *poiInfo, AddressType type);
+
+@property (nonatomic, assign) AddressType                       addrType;
 
 @end

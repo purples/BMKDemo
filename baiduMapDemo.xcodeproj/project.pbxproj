@@ -22,7 +22,6 @@
 		392CF4671E9742C800443F42 /* SQRouteAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CF4631E9742C800443F42 /* SQRouteAnnotation.m */; };
 		392CF4681E9742C800443F42 /* SQRouteMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CF4651E9742C800443F42 /* SQRouteMapView.m */; };
 		3939D5211E9CAC94000FDD4B /* SQPOISearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939D5201E9CAC94000FDD4B /* SQPOISearchVC.m */; };
-		3939D5241E9CB2E8000FDD4B /* SQPOIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939D5231E9CB2E8000FDD4B /* SQPOIModel.m */; };
 		3939D5271E9CB4BD000FDD4B /* SQSearchListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939D5261E9CB4BD000FDD4B /* SQSearchListView.m */; };
 		3939D52A1E9CB4F1000FDD4B /* SQSelectAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939D5291E9CB4F1000FDD4B /* SQSelectAddressView.m */; };
 		3939D52F1E9CCE28000FDD4B /* SQPOIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3939D52E1E9CCE28000FDD4B /* SQPOIHelper.m */; };
@@ -80,8 +79,6 @@
 		392CF4651E9742C800443F42 /* SQRouteMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRouteMapView.m; sourceTree = "<group>"; };
 		3939D51F1E9CAC94000FDD4B /* SQPOISearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPOISearchVC.h; sourceTree = "<group>"; };
 		3939D5201E9CAC94000FDD4B /* SQPOISearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPOISearchVC.m; sourceTree = "<group>"; };
-		3939D5221E9CB2E8000FDD4B /* SQPOIModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPOIModel.h; sourceTree = "<group>"; };
-		3939D5231E9CB2E8000FDD4B /* SQPOIModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPOIModel.m; sourceTree = "<group>"; };
 		3939D5251E9CB4BD000FDD4B /* SQSearchListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSearchListView.h; sourceTree = "<group>"; };
 		3939D5261E9CB4BD000FDD4B /* SQSearchListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSearchListView.m; sourceTree = "<group>"; };
 		3939D5281E9CB4F1000FDD4B /* SQSelectAddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSelectAddressView.h; sourceTree = "<group>"; };
@@ -299,8 +296,6 @@
 		3939D51D1E9CABE1000FDD4B /* M */ = {
 			isa = PBXGroup;
 			children = (
-				3939D5221E9CB2E8000FDD4B /* SQPOIModel.h */,
-				3939D5231E9CB2E8000FDD4B /* SQPOIModel.m */,
 				3939D52D1E9CCE28000FDD4B /* SQPOIHelper.h */,
 				3939D52E1E9CCE28000FDD4B /* SQPOIHelper.m */,
 			);
@@ -518,7 +513,6 @@
 				392CF4531E97425A00443F42 /* SQCarAnnotationView.m in Sources */,
 				3939D5211E9CAC94000FDD4B /* SQPOISearchVC.m in Sources */,
 				392CF4521E97425A00443F42 /* SQCarLocationModel.m in Sources */,
-				3939D5241E9CB2E8000FDD4B /* SQPOIModel.m in Sources */,
 				392CF4681E9742C800443F42 /* SQRouteMapView.m in Sources */,
 				392CF4671E9742C800443F42 /* SQRouteAnnotation.m in Sources */,
 				390666CF1E89036800906A08 /* AppDelegate.m in Sources */,
