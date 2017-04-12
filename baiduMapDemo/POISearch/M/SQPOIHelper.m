@@ -25,7 +25,7 @@
 
 - (instancetype)init
 {
-    if (_search) {
+    if (self = [super init]) {
         _search = [[BMKPoiSearch alloc] init];
         _search.delegate = self;
 
