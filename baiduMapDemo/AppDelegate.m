@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 
-#define BMKMapKey @"U7jyWRca8ap265mHpwUpzBveaRtGx7tf"
+#define BMKMapKey @""
 
 @interface AppDelegate ()
 

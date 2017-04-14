@@ -671,7 +671,7 @@
 				GCC_PREFIX_HEADER = baiduMapDemo/mapDemo.pch;
 				INFOPLIST_FILE = baiduMapDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.01zhuanche.taxipassenger.ShouYueTechnology;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baiduMapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -685,7 +685,7 @@
 				GCC_PREFIX_HEADER = baiduMapDemo/mapDemo.pch;
 				INFOPLIST_FILE = baiduMapDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.01zhuanche.taxipassenger.ShouYueTechnology;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baiduMapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
